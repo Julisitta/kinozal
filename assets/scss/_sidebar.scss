@@ -1,3 +1,111 @@
 .left-sidebar {
     @extend %margin-bottom-lg;
 }
+
+.vertical-slider {
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.site-news {
+    &-item {
+    clear: both;
+    position: relative;
+
+    &:not(:last-child) {
+
+        min-height: 85px;
+        margin-bottom: $gap;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: calc(100% - 85px);
+            height: 1px;
+            content: "";
+            background-color: $color-gray;
+        }
+    }
+
+        &__image {
+            float: left;
+            width: 75px;
+            margin: 0 10px 10px 0;
+            transition: background-color .25s;
+        }
+        &__title {
+            margin-bottom: 10px;
+            a {
+                transition: color .5s;
+                @include block-shortener(1rem, 1.5, 50px, 2);
+            }
+        }
+        &__date {
+            font-size: 0.8rem;
+            text-align: right;
+            color: darken($color-gray, 30%);
+        }
+        &:hover {
+            .site-news-item__title a {
+                color: $color-accent;
+            }
+            .site-news-item__image {
+                background-color: $color-accent;
+                border-color: $color-accent;
+            }
+        }
+    }
+}
+
+.top-films {
+    &-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-list {
+        margin-bottom: 0;
+        position: relative;
+
+        &__link {
+            background-color: transparent;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            border-top: 1px solid $color-gray;
+            margin-right: -1px;
+            margin-left: -1px;
+            padding: 10px 50px 10px $gap;
+            color: $color-primary!important;
+
+            &:first-child {
+                border-radius: 0;
+                border-top: none;
+            }
+            &:last-child {
+                border-radius: 0;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $color-accent !important;
+                color: $color-light !important;
+
+                .badge {
+                    background-color:$color-dark;
+                }
+            }
+        }
+        &__badge { 
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

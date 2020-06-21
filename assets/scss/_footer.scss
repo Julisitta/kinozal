@@ -1,0 +1,50 @@
+
+.footer {
+    background-color: $color-dark;
+
+}
+
+.footer-information {
+    margin: $gap*2.5 0 $gap*1.5 0;
+    color: $color-light;
+
+
+    &__title {
+        $font-header: $font-main;
+        display: block;
+  
+
+        margin-right: -$gap;
+    
+
+        // @include xs-min() {
+        //     font-size: 1.1rem;
+        //     letter-spacing: 0.1em;
+        //     margin-right: -$gap; 
+        // }
+        // @include xs {
+        //     font-size: 1rem;
+        //     letter-spacing: 0.1em;
+        //     margin-right: -$gap/2; 
+
+        // }
+    }
+    &__link {
+        display: block;
+        font-size: 1rem;
+        color: lighten($color-dark, 30%)!important;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        &:hover,
+        &:focus {
+            color: $color-light!important;
+            background-color: transparent!important;
+        }
+    }
+    &__discription {
+        display: block;
+        text-align: center;
+
+    }
+}
