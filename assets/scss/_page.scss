@@ -4,19 +4,25 @@
     {
         min-height: 20px;
         margin-bottom: 18px;
-        padding: 18.5px;
-        padding-top: 18px;
-        padding-left: 33px;
+        padding: 18px 18.5px 18.5px 33px;
 
         text-align: center;
         letter-spacing: .005em;
 
         background-color: lighten($color-gray, 8%);
+
+        @include md {
+            padding: 18px 18.5px 19px 33px;
+        }
+
         &-item
         {
             font-size: 1.2rem;
 
             margin-right: 15px;
+            @include md {
+                margin-right: 14.5px;
+            }
         }
         &-badge
         {
@@ -86,6 +92,10 @@
         @include md
         {
             margin-left: 604px;
+        }
+        @include sm
+        {
+            margin-left: 430px;
         }
     }
 }

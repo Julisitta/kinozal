@@ -1,48 +1,35 @@
-.navbar-inverse
-{
+.navbar-inverse {
     margin-bottom: 0;
-
-    border-color: transparent;
     background-color: darken($color-dark, 4%);
-
-    a
-    {
-        border-radius: 4px;
-    }
-
-    .navbar-nav
-    {
-        > .active > a
-        {
-            background-color: $color-primary-dark;
-
-            &:hover,
-            &:focus
-            {
-                background-color: $color-primary-light;
-            }
+    border-color: transparent;
+  
+    .navbar-nav {
+      > .active > a {
+        background-color: $color-primary-dark;
+  
+        &:focus,
+        &:hover {
+          background-color: $color-primary-light;
         }
-
-        > li > a
-        {
-            transition: background-color .5s;
-
-            @include sm
-            {
-            }
-            @include sm-min
-            {
-                text-align: center;
-            }
-
-            &:hover,
-            &:focus
-            {
-                background-color: $color-primary;
-            }
+      }
+  
+      > li > a {
+        transition: background-color 0.5s;
+  
+        @include sm-min {
+          border-radius: 4px;
         }
+        @include sm {
+          text-align: center;
+        }
+  
+        &:focus,
+        &:hover {
+          background-color: $color-primary;
+        }
+      }
     }
-}
+  }
 
 .navbar-header
 {
@@ -111,6 +98,15 @@
     {
         border: 1px solid $color-gray;
         border-radius: 0 0 4px 4px;
+        
+        .btn {
+            @include md
+            {
+                padding: 10px 16px;
+                font-size: 18px;
+                line-height: 1.3333333;
+            }
+        }
     }
 }
 
@@ -141,3 +137,4 @@
         display: block;
     }
 }
+
