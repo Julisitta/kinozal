@@ -11,7 +11,8 @@
 
         background-color: lighten($color-gray, 8%);
 
-        @include md {
+        @include md
+        {
             padding: 18px 18.5px 19px 33px;
         }
 
@@ -20,7 +21,9 @@
             font-size: 1.2rem;
 
             margin-right: 15px;
-            @include md {
+
+            @include md
+            {
                 margin-right: 14.5px;
             }
         }

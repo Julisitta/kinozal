@@ -131,23 +131,23 @@
             background-color: $color-accent;
         }
     }
-        &_image {
+    &_image
+    {
         width: 262.484px;
 
-            @include lg
-            {
-                width: 185.547px;
-            }
-            @include md
-            {
-                width: 220px;
-            }
-            @include sm
-            {
-                width: 546px;
-                margin-bottom: 1px;
-            }
-
+        @include lg
+        {
+            width: 185.547px;
+        }
+        @include md
+        {
+            width: 220px;
+        }
+        @include sm
+        {
+            width: 546px;
+            margin-bottom: 1px;
+        }
     }
 
 
@@ -165,8 +165,8 @@
             }
             @include md
             {
-                margin-left: 20px;
                 width: 470px;
+                margin-left: 20px;
             }
             @include sm
             {
@@ -194,20 +194,21 @@
             margin-left: 451px;
         }
     }
-
 }
 
 .news-films-item:last-child
 {
     margin-top: 50px;
+
     @include sm
     {
         margin-bottom: 51px;
     }
-    .news-films-item_image {
+    .news-films-item_image
+    {
         @include sm
         {
-        margin-bottom: 0px;
+            margin-bottom: 0;
         }
     }
 }
