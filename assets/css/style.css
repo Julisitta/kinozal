@@ -8,8 +8,8 @@
 
 .navbar-inverse {
   margin-bottom: 0;
-  background-color: #191919;
   border-color: transparent;
+  background-color: #191919;
 }
 
 .navbar-inverse .navbar-nav > .active > a {
@@ -21,9 +21,9 @@
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
@@ -275,6 +275,7 @@ h4 {
 }
 
 .illusion-description-item {
+  display: inline-block;
   font-size: 1.2rem;
   margin-right: 15px;
 }
@@ -554,9 +555,9 @@ h4 {
 
 @media (max-width: 991.8px) {
   .panel-body .btn {
-    padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
+    padding: 10px 16px;
   }
   .main {
     margin-top: -15px;
@@ -575,8 +576,8 @@ h4 {
     width: 220px;
   }
   .news-films-item__text p {
-    margin-left: 20px;
     width: 470px;
+    margin-left: 20px;
   }
   .news-films-item__button {
     margin-left: 395px;
@@ -643,7 +644,7 @@ h4 {
     margin-bottom: 51px;
   }
   .news-films-item:last-child .news-films-item_image {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   .comments-films__button {
     margin-left: 430px;
