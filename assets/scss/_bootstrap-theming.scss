@@ -1,100 +1,143 @@
-.navbar-inverse {
+.navbar-inverse
+{
     margin-bottom: 0;
-    background-color: darken($color-dark, 4%);
-    border-color: transparent;
 
-    .navbar-nav {
-        > .active > a {
+    border-color: transparent;
+    background-color: darken($color-dark, 4%);
+
+    a
+    {
+        border-radius: 4px;
+    }
+
+    .navbar-nav
+    {
+        > .active > a
+        {
             background-color: $color-primary-dark;
-            border-radius: 4px;
+
             &:hover,
-            &:focus {
+            &:focus
+            {
                 background-color: $color-primary-light;
             }
         }
 
-        > li > a {
-            transition: background-color 0.5s;
+        > li > a
+        {
+            transition: background-color .5s;
 
-            @include sm {
-                border-radius: 4px;
+            @include sm
+            {
             }
-            @include sm-min {
+            @include sm-min
+            {
                 text-align: center;
             }
 
             &:hover,
-            &:focus {
+            &:focus
+            {
                 background-color: $color-primary;
             }
         }
     }
 }
 
-.navbar-header {
+.navbar-header
+{
     text-align: center;
 }
 
-.navbar-toggle {
+.navbar-toggle
+{
     float: none;
+
     margin-right: 0;
 }
 
-.navbar-left {
-    @include sm {
+.navbar-left
+{
+    @include sm
+    {
         margin-bottom: 0;
     }
-
-    @include sm-min {
-        li {
+    @include sm-min
+    {
+        li
+        {
             margin: 5px 5px 5px 0;
         }
     }
 }
 
-.navbar-right {
-    @include sm {
+.navbar-right
+{
+    @include sm
+    {
         margin-bottom: 0;
     }
-    
-    @include sm-min {
-        li {
+    @include sm-min
+    {
+        li
+        {
             margin: 5px 0 5px 5px;
         }
     }
 }
 
-.panel {
-    border: none;
-    background-color: lighten($color-gray, 8%);
+.panel
+{
     margin-bottom: $gap*2;
 
-    &-info > .panel-heading {
-    background-color: $color-accent;
-    color: $color-light;
     border: none;
+    background-color: lighten($color-gray, 8%);
+
+    &-info > .panel-heading
+    {
+        color: $color-light;
+        border: none;
+        background-color: $color-accent;
     }
 
-    &-title {
+    &-title
+    {
         font-size: 1.2rem;
-        letter-spacing: 0.1em;
 
+        letter-spacing: .1em;
     }
-     
-    &-body {
+
+    &-body
+    {
         border: 1px solid $color-gray;
         border-radius: 0 0 4px 4px;
     }
 }
 
-.input {
+.input
+{
     &-lg,
-    &-group-lg > .form-control {
-    font-size: 14px;
+    &-group-lg > .form-control
+    {
+        font-size: 14px;
     }
 }
 
 
-.media-list {
+.media-list
+{
     margin-bottom: 0;
+}
+
+.embed-responsive
+{
+    margin-bottom: 0;
+}
+
+.media-body
+{
+    @include sm
+    {
+        display: block;
+    }
 }

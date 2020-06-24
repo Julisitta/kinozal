@@ -1,110 +1,145 @@
-.left-sidebar {
+.left-sidebar
+{
     @extend %margin-bottom-lg;
 }
 
-.vertical-slider {
-    border-radius: 4px;
+.vertical-slider
+{
     overflow: hidden;
 
-    img {
+    border-radius: 4px;
+
+    img
+    {
         width: 100%;
     }
 }
 
-.site-news {
-    &-item {
-    clear: both;
-    position: relative;
+.site-news
+{
+    &-item
+    {
+        position: relative;
 
-    &:not(:last-child) {
+        clear: both;
 
-        min-height: 85px;
-        margin-bottom: $gap;
+        &:not(:last-child)
+        {
+            min-height: 85px;
+            margin-bottom: $gap;
 
-        &::after {
-            position: absolute;
-            right: 0;
-            bottom: -5px;
-            width: calc(100% - 85px);
-            height: 1px;
-            content: "";
-            background-color: $color-gray;
+            &::after
+            {
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+
+                width: calc(100% - 85px);
+                height: 1px;
+
+                content: '';
+
+                background-color: $color-gray;
+            }
         }
-    }
 
-        &__image {
+        &__image
+        {
             float: left;
+
             width: 75px;
             margin: 0 10px 10px 0;
+
             transition: background-color .25s;
         }
-        &__title {
+        &__title
+        {
             margin-bottom: 10px;
-            a {
+            a
+            {
                 transition: color .5s;
+
                 @include block-shortener(1rem, 1.5, 50px, 2);
             }
         }
-        &__date {
-            font-size: 0.8rem;
+        &__date
+        {
+            font-size: .8rem;
+
             text-align: right;
+
             color: darken($color-gray, 30%);
         }
-        &:hover {
-            .site-news-item__title a {
+        &:hover
+        {
+            .site-news-item__title a
+            {
                 color: $color-accent;
             }
-            .site-news-item__image {
-                background-color: $color-accent;
+            .site-news-item__image
+            {
                 border-color: $color-accent;
+                background-color: $color-accent;
             }
         }
     }
 }
 
-.top-films {
-    &-body {
-        padding-left: 0;
+.top-films
+{
+    &-body
+    {
         padding-right: 0;
+        padding-left: 0;
     }
 
-    &-list {
-        margin-bottom: 0;
+    &-list
+    {
         position: relative;
 
-        &__link {
-            background-color: transparent;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            border-top: 1px solid $color-gray;
+        margin-bottom: 0;
+
+        &__link
+        {
             margin-right: -1px;
             margin-left: -1px;
             padding: 10px 50px 10px $gap;
-            color: $color-primary!important;
 
-            &:first-child {
-                border-radius: 0;
+            color: $color-primary!important;
+            border-top: 1px solid $color-gray;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+            background-color: transparent;
+
+            &:first-child
+            {
                 border-top: none;
+                border-radius: 0;
             }
-            &:last-child {
+            &:last-child
+            {
                 border-radius: 0;
             }
 
             &:hover,
-            &:focus {
-                background-color: $color-accent !important;
+            &:focus
+            {
                 color: $color-light !important;
+                background-color: $color-accent !important;
 
-                .badge {
-                    background-color:$color-dark;
+                .badge
+                {
+                    background-color: $color-dark;
                 }
             }
         }
-        &__badge { 
+        &__badge
+        {
             position: absolute;
-            right: 10px;
-            top: 50%;
+            top: 27%;
+            right: -5.5px;
+
             transform: translateX(-50%);
         }
     }

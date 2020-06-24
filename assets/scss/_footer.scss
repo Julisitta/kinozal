@@ -1,50 +1,122 @@
 
-.footer {
+.footer
+{
     background-color: $color-dark;
 
+    @include md
+    {
+        margin-top: -1px;
+    }
 }
 
-.footer-information {
-    margin: $gap*2.5 0 $gap*1.5 0;
+.footer-information
+{
+    margin: $gap*2.3 0 10px 0;
+
     color: $color-light;
 
+    @include lg
+    {
+        margin-top: 35px;
+        margin-left: 11px;
+    }
 
-    &__title {
-        $font-header: $font-main;
+    &-list
+    {
+        max-width: 262.5px;
+        margin-right: 15px;
+        margin-left: 15px;
+
+        @include lg
+        {
+            margin: 0;
+        }
+        @include md
+        {
+            margin-right: 114px;
+            margin-bottom: 9px;
+            margin-left: -2px;
+        }
+        @include sm
+        {
+            margin-right: 36.5px;
+            margin-left: -11px;
+        }
+    }
+    &-list:nth-child(even)
+    {
+        @include sm
+        {
+            width: 250px;
+            margin-right: 0;
+            margin-bottom: 10px;
+            padding-right: 0;
+        }
+    }
+
+    &__title
+    {
+        font-size: 1.125rem;
+
         display: block;
-  
 
         margin-right: -$gap;
-    
 
-        // @include xs-min() {
-        //     font-size: 1.1rem;
-        //     letter-spacing: 0.1em;
-        //     margin-right: -$gap; 
-        // }
-        // @include xs {
-        //     font-size: 1rem;
-        //     letter-spacing: 0.1em;
-        //     margin-right: -$gap/2; 
-
-        // }
+        $font-header: $font-main;
+        @include lg
+        {
+            margin-bottom: 10px;
+        }
+        @include md
+        {
+            margin-bottom: 10px;
+        }
+        @include sm
+        {
+            margin-bottom: 9px;
+        }
     }
-    &__link {
-        display: block;
+    &__link
+    {
         font-size: 1rem;
-        color: lighten($color-dark, 30%)!important;
-        background-color: transparent;
+
+        display: block;
+
+        padding: .5px 0;
+
+        color: lighten($color-dark, 35%)!important;
         border: none;
-        padding: 0;
+        background-color: transparent;
         &:hover,
-        &:focus {
+        &:focus
+        {
             color: $color-light!important;
             background-color: transparent!important;
         }
     }
-    &__discription {
+    &__discription
+    {
+        font-weight: bold;
+
         display: block;
+
+        margin-top: 9px;
+
         text-align: center;
 
+        @include lg
+        {
+            margin-top: 30px;
+            margin-left: -30px;
+        }
+        @include md
+        {
+            margin-top: 20px;
+            margin-left: -34px;
+        }
+        @include sm
+        {
+            margin-left: -11px;
+        }
     }
 }

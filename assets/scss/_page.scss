@@ -1,0 +1,91 @@
+.illusion
+{
+    &-description
+    {
+        min-height: 20px;
+        margin-bottom: 18px;
+        padding: 18.5px;
+        padding-top: 18px;
+        padding-left: 33px;
+
+        text-align: center;
+        letter-spacing: .005em;
+
+        background-color: lighten($color-gray, 8%);
+        &-item
+        {
+            font-size: 1.2rem;
+
+            margin-right: 15px;
+        }
+        &-badge
+        {
+            font-size: .95rem;
+        }
+    }
+}
+
+.film-discription
+{
+    margin-top: 20px;
+    .film-discription-text
+    {
+        padding-bottom: 9px;
+    }
+}
+
+.review-film
+{
+    &-persone
+    {
+        font-size: 1rem;
+
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        letter-spacing: .0015em;
+    }
+
+    &-text p
+    {
+        padding: $gap;
+    }
+
+    &-item
+    {
+        margin-bottom: $gap*2;
+    }
+}
+
+
+.comments-films
+{
+    margin-bottom: 41.5px;
+
+    @include lg
+    {
+        margin-bottom: 20px;
+    }
+    @include md
+    {
+        margin-bottom: 80px;
+    }
+    textarea
+    {
+        padding: 7px 12px 25px 12px;
+    }
+
+    &__button
+    {
+        margin-left: 731px;
+
+        @include lg
+        {
+            margin-left: 501px;
+        }
+        @include md
+        {
+            margin-left: 604px;
+        }
+    }
+}

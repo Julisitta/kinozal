@@ -1,24 +1,30 @@
-.header {
+.header
+{
     margin-bottom: 80px;
 }
 
-.header-logo {
+.header-logo
+{
     padding: 100px 0;
+
     text-align: center;
+
     background-color: $color-dark;
     background-image: url(../img/header-bg.jpg);
     background-position: center center;
     background-size: cover;
 
-    &__title {
-        display: block;
-
+    &__title
+    {
         font-family: $font-header;
         font-size: 3.5rem;
-        letter-spacing: 0.33em;
+
+        display: block;
+
+        letter-spacing: .33em;
 
         color: $color-accent;
-        
+
         @extend %text-shadow;
 
         // @include xs-min() {
@@ -33,11 +39,16 @@
 
         // }
     }
-    &__discription {
-        display: block;
+    &__discription
+    {
         font-size: 1.15rem;
-        letter-spacing: 0.2em;
+
+        display: block;
+
+        letter-spacing: .2em;
+
         color: $color-light;
+
         @extend %text-shadow;
     }
 }
